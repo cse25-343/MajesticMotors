@@ -786,31 +786,22 @@ footer button{
 
 @media(max-width:768px){
 
-    .main-content{
+    .navbar{
 
         flex-direction:column;
+
+        padding:20px;
     }
 
-    .sidebar{
+    .navbar nav ul{
 
-        width:100%;
-    }
+        flex-wrap:wrap;
 
-    .home-categories{
+        justify-content:center;
 
-        width:100%;
+        gap:10px;
 
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .product-categories{
-
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .brand-container{
-
-        grid-template-columns:repeat(2,1fr);
+        margin-top:10px;
     }
 
     .hero{
@@ -822,7 +813,7 @@ footer button{
 
     .hero-text h1{
 
-        font-size:35px;
+        font-size:40px;
 
         width:100%;
     }
@@ -832,42 +823,39 @@ footer button{
         font-size:18px;
     }
 
-    .navbar{
-
-        flex-direction:column;
-
-        gap:15px;
-
-        text-align:center;
-    }
-
-    .navbar nav ul{
+    .vehicle-search{
 
         flex-wrap:wrap;
 
-        justify-content:center;
+        padding:15px;
     }
-}
 
-/* =========================
-   SMALL PHONES
-========================= */
+    .vehicle-search select,
+    .vehicle-search button{
 
-@media(max-width:480px){
+        width:45%;
+    }
 
-    .home-categories,
     .product-categories{
 
+        width:100%;
+
+        padding:20px;
+
         grid-template-columns:1fr;
     }
 
-    .brand-container{
+    .category-card{
 
-        grid-template-columns:1fr;
+        width:100%;
     }
 
-    .hero-text h1{
+    .floating-cart{
 
-        font-size:28px;
+        width:60px;
+
+        height:60px;
+
+        font-size:25px;
     }
 }
