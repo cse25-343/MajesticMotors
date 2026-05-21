@@ -1,509 +1,1529 @@
-/* =========================
-   RESET
-========================= */
+/* =========================RESET========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 
-body{
-    background:#f4f4f4;
-    overflow-x:hidden;
-    color:#333;
-    line-height:1.6;
-}
+body{background:#f4f4f4;overflow-x:hidden;color:#333;line-height:1.6;}
 
-/* =========================
-   NAVBAR
-========================= */
+/* =========================NAVBAR========================= */
 
 .navbar{
 
-    background:#000;
+background:#000;
 
-    color:white;
+color:white;
 
-    display:flex;
+display:flex;
 
-    justify-content:space-between;
+justify-content:space-between;
 
-    align-items:center;
+align-items:center;
 
-    padding:15px 60px;
+padding:15px 60px;
+
 }
 
-.navbar h2{
-
-    color:orange;
-}
+.navbar h2{color:orange;}
 
 .navbar nav ul{
 
-    display:flex;
+display:flex;
 
-    list-style:none;
+list-style:none;
 
-    gap:30px;
+gap:30px;
+
 }
 
 .navbar nav ul li a{
 
-    color:white;
+color:white;
 
-    text-decoration:none;
+text-decoration:none;
 
-    font-weight:bold;
+font-weight:bold;
 
-    padding:10px 15px;
+padding:10px 15px;
 
-    border-radius:5px;
+border-radius:5px;
 
-    transition:0.3s;
+transition:0.3s;
+
 }
 
 .navbar nav ul li a:hover{
 
-    background:orange;
+background:orange;
+
 }
 
-/* =========================
-   HERO
-========================= */
+/* =========================HERO========================= */
 
 .hero{
 
-    height:500px;
+height:500px;
 
-    background:
-    linear-gradient(rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)),
-    url('https://cdn.pixabay.com/photo/2018/10/14/19/01/offroad-3747184_1280.jpg');
+background:
+linear-gradient(rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)),
+url('https://cdn.pixabay.com/photo/2018/10/14/19/01/offroad-3747184_1280.jpg');
 
-    background-size:cover;
+background-size:cover;
 
-    background-position:center;
+background-position:center;
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    padding-left:80px;
+padding-left:80px;
 
-    color:white;
+color:white;
+
 }
 
 .hero-text h1{
 
-    font-size:70px;
+font-size:70px;
 
-    width:600px;
+width:600px;
 
-    margin-bottom:20px;
+margin-bottom:20px;
+
 }
 
 .hero-text p{
 
-    font-size:25px;
+font-size:25px;
 
-    margin-bottom:30px;
+margin-bottom:30px;
+
 }
 
 .hero-text a{
 
-    background:white;
+background:white;
 
-    color:black;
+color:black;
 
-    text-decoration:none;
+text-decoration:none;
 
-    padding:15px 35px;
+padding:15px 35px;
 
-    border-radius:30px;
+border-radius:30px;
 
-    font-weight:bold;
+font-weight:bold;
+
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
+/* =========================HOME MAIN CONTENT========================= */
 
 .main-content{
 
-    display:flex;
+display:flex;
 
-    gap:20px;
+gap:20px;
 
-    padding:30px 60px;
+padding:30px 60px;
+
 }
 
-/* =========================
-   SIDEBAR
-========================= */
+/* =========================HOME CATEGORIES
 
-.sidebar{
+.home-categories,.product-categories{
 
-    width:25%;
+width:75%;
 
-    display:flex;
+display:grid;
 
-    flex-direction:column;
+grid-template-columns:repeat(3,1fr);
 
-    gap:20px;
+gap:20px;
+
 }
 
-.offer-box,
-.help-box{
+.card{
 
-    background:#111;
+position:relative;
 
-    color:white;
+overflow:hidden;
 
-    padding:30px;
+border-radius:10px;
 
-    border-radius:10px;
 }
 
-.offer-box h2,
-.help-box h2{
+.card img{
 
-    color:orange;
+width:100%;
 
-    margin-bottom:15px;
+height:230px;
+
+object-fit:cover;
+
+filter:brightness(70%);
+
 }
 
-.offer-box h1{
+.card h3{
 
-    font-size:45px;
+position:absolute;
 
-    margin-bottom:15px;
+bottom:20px;
+
+left:20px;
+
+color:white;
+
+font-size:28px;
+
+}========================= // =========================BOTH CATEGORIES========================= */
+
+.home-categories,.product-categories{
+
+display:grid;
+
+gap:20px;
+
 }
 
-.offer-box p,
-.help-box p{
-
-    margin-bottom:20px;
-}
-
-.offer-box a,
-.help-box a{
-
-    display:inline-block;
-
-    background:orange;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:12px 25px;
-
-    border-radius:5px;
-}
-
-/* =========================
-   HOME CATEGORIES
-========================= */
+/* HOME PAGE */
 
 .home-categories{
 
-    width:75%;
+width:70%;
 
-    display:grid;
+grid-template-columns:repeat(3,1fr);
 
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
 }
 
-/* =========================
-   PRODUCTS PAGE
-========================= */
+/* PRODUCTS PAGE */
 
 .product-categories{
 
-    width:95%;
+width:95%;
 
-    margin:50px auto;
+margin:50px auto;
 
-    display:grid;
+grid-template-columns:repeat(5,1fr);
 
-    grid-template-columns:repeat(5,1fr);
-
-    gap:20px;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* =========================CARDS========================= */
 
-.card,
-.category-card,
-.brand-card{
+.card,.category-card{
 
-    background:#1b1b1b;
+background:#1b1b1b;
 
-    color:white;
+color:white;
 
-    border-radius:10px;
+border-radius:10px;
 
-    overflow:hidden;
+overflow:hidden;
 
-    text-align:center;
+text-align:center;
 
-    box-shadow:0 0 10px rgba(0,0,0,0.3);
+box-shadow:0 0 10px rgba(0,0,0,0.3);
 
-    transition:0.3s;
+transition:0.3s;
+
 }
 
-.card:hover,
-.category-card:hover,
-.brand-card:hover{
+.card:hover,.category-card:hover{
 
-    transform:translateY(-5px);
+transform:translateY(-5px);
 
-    border:1px solid orange;
+border:1px solid orange;
+
 }
 
-.card img,
-.category-card img,
-.brand-card img{
+/* IMAGES */
 
-    width:100%;
+.card img,.category-card img{
 
-    height:220px;
+width:100%;
 
-    object-fit:cover;
+height:220px;
+
+object-fit:cover;
+
 }
 
-.card h3,
-.category-card p,
-.brand-card p{
+/* TEXT */
 
-    padding:15px;
+.card h3,.category-card p{
 
-    font-weight:bold;
+padding:15px;
+
+font-weight:bold;
+
 }
+
+/* PRICE */
 
 .category-card h3{
 
-    color:orange;
+color:orange;
 
-    margin-bottom:10px;
+margin-bottom:10px;
+
 }
+
+/* BUTTON */
 
 .category-card button{
 
-    background:orange;
+background:orange;
 
-    color:white;
+color:white;
 
-    border:none;
+border:none;
 
-    padding:10px 20px;
+padding:10px 20px;
 
-    border-radius:5px;
+border-radius:5px;
 
-    margin-bottom:15px;
+margin-bottom:15px;
 
-    cursor:pointer;
+cursor:pointer;
+
 }
 
-/* =========================
-   BRANDS
-========================= */
-
-.brands{
-
-    padding:40px 60px;
-
-    text-align:center;
-}
-
-.brands h2{
-
-    font-size:40px;
-
-    margin-bottom:30px;
-}
-
-.brand-container{
-
-    display:grid;
-
-    grid-template-columns:repeat(5,1fr);
-
-    gap:20px;
-}
-
-/* =========================
-   VEHICLE SEARCH
-========================= */
-
-.vehicle-search{
-
-    background:black;
-
-    padding:20px;
-
-    display:flex;
-
-    gap:15px;
-
-    justify-content:center;
-}
-
-.vehicle-search select,
-.vehicle-search button{
-
-    padding:12px;
-
-    width:180px;
-
-    border:none;
-
-    border-radius:5px;
-}
-
-.vehicle-search button{
-
-    background:orange;
-
-    color:white;
-}
-
-/* =========================
-   PROMO
-========================= */
-
-.promo{
-
-    display:flex;
-
-    gap:20px;
-
-    padding:0 50px 50px;
-}
-
-.promo-box{
-
-    flex:1;
-
-    background:white;
-
-    border-radius:10px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:20px;
-
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.promo-box img{
-
-    width:180px;
-}
-
-/* =========================
-   FLOATING CART
-========================= */
+/* =========================FLOATING CART========================= */
 
 .floating-cart{
 
-    position:fixed;
+position:fixed;
 
-    bottom:30px;
+bottom:30px;/* =========================
 
-    right:30px;
+RESET========================= */
 
-    width:65px;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 
-    height:65px;
+body{background:#f4f4f4;overflow-x:hidden;color:#333;line-height:1.6;}
 
-    background:#e7094c;
+/* =========================NAVBAR========================= */
 
-    color:white;
+.navbar{
 
-    text-decoration:none;
+background:#000;
 
-    border-radius:50%;
+color:white;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:space-between;
 
-    align-items:center;
+align-items:center;
 
-    font-size:30px;
+padding:15px 60px;
 
-    box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
 
-    z-index:1000;
+.navbar h2{color:orange;}
 
-    transition:0.3s;
+.navbar nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+.navbar nav ul li a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+padding:10px 15px;
+
+border-radius:5px;
+
+transition:0.3s;
+
+}
+
+.navbar nav ul li a:hover{
+
+background:orange;
+
+}
+
+/* =========================HERO========================= */
+
+.hero{
+
+height:500px;
+
+background:
+linear-gradient(rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)),
+url('https://cdn.pixabay.com/photo/2018/10/14/19/01/offroad-3747184_1280.jpg');
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+padding-left:80px;
+
+color:white;
+
+}
+
+.hero-text h1{
+
+font-size:70px;
+
+width:600px;
+
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:25px;
+
+margin-bottom:30px;
+
+}
+
+.hero-text a{
+
+background:white;
+
+color:black;
+
+text-decoration:none;
+
+padding:15px 35px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+}
+
+/* =========================HOME MAIN CONTENT========================= */
+
+.main-content{
+
+display:flex;
+
+gap:20px;
+
+padding:30px 60px;
+
+}
+
+/* =========================HOME CATEGORIES
+
+.home-categories,.product-categories{
+
+width:75%;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+}
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:10px;
+
+}
+
+.card img{
+
+width:100%;
+
+height:230px;
+
+object-fit:cover;
+
+filter:brightness(70%);
+
+}
+
+.card h3{
+
+position:absolute;
+
+bottom:20px;
+
+left:20px;
+
+color:white;
+
+font-size:28px;
+
+}========================= // =========================BOTH CATEGORIES========================= */
+
+.home-categories,.product-categories{
+
+display:grid;
+
+gap:20px;
+
+}
+
+/* HOME PAGE */
+
+.home-categories{
+
+width:70%;
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+/* PRODUCTS PAGE */
+
+.product-categories{
+
+width:95%;
+
+margin:50px auto;
+
+grid-template-columns:repeat(5,1fr);
+
+}
+
+/* =========================CARDS========================= */
+
+.card,.category-card{
+
+background:#1b1b1b;
+
+color:white;
+
+border-radius:10px;
+
+overflow:hidden;
+
+text-align:center;
+
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+
+transition:0.3s;
+
+}
+
+.card:hover,.category-card:hover{
+
+transform:translateY(-5px);
+
+border:1px solid orange;
+
+}
+
+/* IMAGES */
+
+.card img,.category-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+/* TEXT */
+
+.card h3,.category-card p{
+
+padding:15px;
+
+font-weight:bold;
+
+}
+
+/* PRICE */
+
+.category-card h3{
+
+color:orange;
+
+margin-bottom:10px;
+
+}
+
+/* BUTTON */
+
+.category-card button{
+
+background:orange;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:5px;
+
+margin-bottom:15px;
+
+cursor:pointer;
+
+}
+
+/* =========================FLOATING CART========================= */
+
+.floating-cart{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+width:65px;
+
+height:65px;
+
+background:rgb(231, 9, 76);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+
+transition:0.3s;
+
+z-index:1000;
+
 }
 
 .floating-cart:hover{
 
-    background:orange;
+background:orange;
 
-    transform:scale(1.1);
+transform:scale(1.1);
+
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* =========================SIDEBAR========================= */
+
+.sidebar{
+
+width:25%;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.offer-box,.help-box{
+
+background:#111;
+
+color:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+.offer-box h2,.help-box h2{
+
+color:orange;
+
+margin-bottom:15px;
+
+}
+
+.offer-box h1{
+
+margin-bottom:15px;
+
+font-size:45px;
+
+}
+
+.offer-box p,.help-box p{
+
+margin-bottom:20px;
+
+}
+
+.offer-box a,.help-box a{
+
+display:inline-block;
+
+background:orange;
+
+color:white;
+
+text-decoration:none;
+
+padding:12px 25px;
+
+border-radius:5px;
+
+}
+
+/* =========================BRANDS========================= */
+
+.brands{
+
+padding:40px 60px;
+
+text-align:center;
+
+}
+
+.brands h2{
+
+margin-bottom:30px;
+
+font-size:40px;
+
+}
+
+.brand-container{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:20px;
+
+}
+
+.brand-card{
+
+background:white;
+
+border-radius:10px;
+
+overflow:hidden;
+
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.brand-card img{
+
+width:100%;
+
+height:140px;
+
+object-fit:cover;
+
+}
+
+.brand-card p{
+
+padding:15px;
+
+font-weight:bold;
+
+}
+
+/* =========================PRODUCT PAGE========================= */
+
+.vehicle-search{
+
+background:black;
+
+padding:20px;
+
+display:flex;
+
+gap:15px;
+
+justify-content:center;
+
+}
+
+.vehicle-search select,.vehicle-search button{
+
+padding:12px;
+
+width:180px;
+
+border:none;
+
+border-radius:5px;
+
+}
+
+.vehicle-search button{
+
+background:orange;
+
+color:white;
+
+}
+
+
+
+/* =========================PROMO========================= */
+
+.promo{
+
+display:flex;
+
+gap:20px;
+
+padding:0 50px 50px;
+
+}
+
+.promo-box{
+
+flex:1;
+
+background:white;
+
+border-radius:10px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px;
+
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.promo-box img{
+
+width:180px;
+
+}
+
+/* =========================ABOUT PAGE========================= */
+
+.about{
+
+background:
+linear-gradient(rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)),
+url('https://cdn.pixabay.com/photo/2016/11/29/09/32/auto-1868726_1280.jpg');
+
+background-size:cover;
+
+background-position:center;
+
+color:white;
+
+text-align:center;
+
+padding:100px 20px;
+
+}
+
+.about h2{
+
+font-size:50px;
+
+color:orange;
+
+margin-bottom:20px;
+
+}
+
+.about-section,.contact-section,.contact,.cart-container,.main-feedback{
+
+width:90%;
+
+margin:60px auto;
+
+display:flex;
+
+gap:40px;
+
+}
+
+/* =========================CONTACT PAGE========================= */
+
+.contact form{
+
+flex:1;
+
+background:#1b1b1b;
+
+color:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+.contact input,.contact textarea{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:20px;
+
+border:none;
+
+border-radius:5px;
+
+background:#333;
+
+color:white;
+
+}
+
+.contact button{
+
+background:orange;
+
+color:white;
+
+border:none;
+
+padding:12px 25px;
+
+border-radius:5px;
+
+}
+
+.contact-info{
+
+flex:1;
+
+background:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+/* =========================FEEDBACK PAGE========================= */
+
+.feedback-card,.feedback-form{
+
+flex:1;
+
+padding:30px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.feedback-card{
+
+background:white;
+
+}
+
+.feedback-form{
+
+background:#1b1b1b;
+
+color:white;
+
+}
+
+/* =========================CART PAGE========================= */
+
+.cart-items{
+
+flex:2;
+
+}
+
+.summary{
+
+flex:1;
+
+background:#1b1b1b;
+
+color:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+.cart-card{
+
+background:#1b1b1b;
+
+color:white;
+
+display:flex;
+
+gap:20px;
+
+padding:20px;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+}
+
+.cart-card img{
+
+width:140px;
+
+height:140px;
+
+object-fit:cover;
+
+}
+
+.remove-btn,.checkout-btn{
+
+background:orange;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:5px;
+
+}
+
+/* =========================FOOTER========================= */
 
 footer{
 
-    background:#000;
+background:#000;
 
-    color:white;
+color:white;
 
-    padding:50px 60px;
+padding:50px 60px;
+
 }
 
 .footer-container{
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(3,1fr);
 
-    gap:40px;
+gap:40px;
+
 }
 
-footer span{
-
-    color:orange;
-}
+footer span{color:orange;}
 
 footer input{
 
-    width:100%;
+width:100%;
 
-    padding:12px;
+padding:12px;
 
-    margin-top:10px;
+margin-top:10px;
+
 }
 
 footer button{
 
-    background:orange;
+background:orange;
 
-    color:white;
+color:white;
 
-    border:none;
+border:none;
 
-    padding:12px 20px;
+padding:12px 20px;
 
-    margin-top:10px;
+margin-top:10px;
+
+}
+
+/* =========================SIDEBAR========================= */
+
+.sidebar{
+
+width:25%;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.offer-box,.help-box{
+
+background:#111;
+
+color:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+.offer-box h2,.help-box h2{
+
+color:orange;
+
+margin-bottom:15px;
+
+}
+
+.offer-box h1{
+
+margin-bottom:15px;
+
+font-size:45px;
+
+}
+
+.offer-box p,.help-box p{
+
+margin-bottom:20px;
+
+}
+
+.offer-box a,.help-box a{
+
+display:inline-block;
+
+background:orange;
+
+color:white;
+
+text-decoration:none;
+
+padding:12px 25px;
+
+border-radius:5px;
+
+}
+
+/* =========================BRANDS========================= */
+
+.brands{
+
+padding:40px 60px;
+
+text-align:center;
+
+}
+
+.brands h2{
+
+margin-bottom:30px;
+
+font-size:40px;
+
+}
+
+.brand-container{
+
+display:grid;
+
+grid-template-columns:repeat(5,1fr);
+
+gap:20px;
+
+}
+
+.brand-card{
+
+background:white;
+
+border-radius:10px;
+
+overflow:hidden;
+
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.brand-card img{
+
+width:100%;
+
+height:140px;
+
+object-fit:cover;
+
+}
+
+.brand-card p{
+
+padding:15px;
+
+font-weight:bold;
+
+}
+
+/* =========================PRODUCT PAGE========================= */
+
+.vehicle-search{
+
+background:black;
+
+padding:20px;
+
+display:flex;
+
+gap:15px;
+
+justify-content:center;
+
+}
+
+.vehicle-search select,.vehicle-search button{
+
+padding:12px;
+
+width:180px;
+
+border:none;
+
+border-radius:5px;
+
+}
+
+.vehicle-search button{
+
+background:orange;
+
+color:white;
+
+}
+
+
+
+/* =========================PROMO========================= */
+
+.promo{
+
+display:flex;
+
+gap:20px;
+
+padding:0 50px 50px;
+
+}
+
+.promo-box{
+
+flex:1;
+
+background:white;
+
+border-radius:10px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px;
+
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.promo-box img{
+
+width:180px;
+
+}
+
+/* =========================ABOUT PAGE========================= */
+
+.about{
+
+background:
+linear-gradient(rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)),
+url('https://cdn.pixabay.com/photo/2016/11/29/09/32/auto-1868726_1280.jpg');
+
+background-size:cover;
+
+background-position:center;
+
+color:white;
+
+text-align:center;
+
+padding:100px 20px;
+
+}
+
+.about h2{
+
+font-size:50px;
+
+color:orange;
+
+margin-bottom:20px;
+
+}
+
+.about-section,.contact-section,.contact,.cart-container,.main-feedback{
+
+width:90%;
+
+margin:60px auto;
+
+display:flex;
+
+gap:40px;
+
+}
+
+/* =========================CONTACT PAGE========================= */
+
+.contact form{
+
+flex:1;
+
+background:#1b1b1b;
+
+color:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+.contact input,.contact textarea{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:20px;
+
+border:none;
+
+border-radius:5px;
+
+background:#333;
+
+color:white;
+
+}
+
+.contact button{
+
+background:orange;
+
+color:white;
+
+border:none;
+
+padding:12px 25px;
+
+border-radius:5px;
+
+}
+
+.contact-info{
+
+flex:1;
+
+background:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+/* =========================FEEDBACK PAGE========================= */
+
+.feedback-card,.feedback-form{
+
+flex:1;
+
+padding:30px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.feedback-card{
+
+background:white;
+
+}
+
+.feedback-form{
+
+background:#1b1b1b;
+
+color:white;
+
+}
+
+/* =========================CART PAGE========================= */
+
+.cart-items{
+
+flex:2;
+
+}
+
+.summary{
+
+flex:1;
+
+background:#1b1b1b;
+
+color:white;
+
+padding:30px;
+
+border-radius:10px;
+
+}
+
+.cart-card{
+
+background:#1b1b1b;
+
+color:white;
+
+display:flex;
+
+gap:20px;
+
+padding:20px;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+}
+
+.cart-card img{
+
+width:140px;
+
+height:140px;
+
+object-fit:cover;
+
+}
+
+.remove-btn,.checkout-btn{
+
+background:orange;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:5px;
+
+}
+
+/* =========================FOOTER========================= */
+
+footer{
+
+background:#000;
+
+color:white;
+
+padding:50px 60px;
+
+}
+
+.footer-container{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:40px;
+
+}
+
+footer span{color:orange;}
+
+footer input{
+
+width:100%;
+
+padding:12px;
+
+margin-top:10px;
+
+}
+
+footer button{
+
+background:orange;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+margin-top:10px;
+
+}
+
+/* MENU BUTTON */
+
+.menu-btn{
+
+display:none;
+
+font-size:30px;
+
+color:white;
+
+cursor:pointer;
+
 }
 
 /* =========================
