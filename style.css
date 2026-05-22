@@ -1,0 +1,904 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    overflow-x:hidden;
+    color:#333;
+    line-height:1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    background:#000;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 60px;
+}
+
+.navbar h2{
+    color:orange;
+}
+
+.navbar nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+}
+
+.navbar nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    padding:10px 15px;
+
+    border-radius:5px;
+
+    transition:0.3s;
+}
+
+.navbar nav ul li a:hover{
+
+    background:orange;
+}
+
+/* =========================
+   MENU BUTTON
+========================= */
+
+.menu-btn{
+
+    display:none;
+
+    font-size:30px;
+
+    color:white;
+
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    height:500px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('https://cdn.pixabay.com/photo/2018/10/14/19/01/offroad-3747184_1280.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:80px;
+
+    color:white;
+}
+
+.hero-text h1{
+
+    font-size:70px;
+
+    width:600px;
+
+    margin-bottom:20px;
+}
+
+.hero-text p{
+
+    font-size:25px;
+
+    margin-bottom:30px;
+}
+
+.hero-text a{
+
+    background:white;
+
+    color:black;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content{
+
+    display:flex;
+
+    gap:20px;
+
+    padding:30px 60px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+
+    width:25%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.offer-box,
+.help-box{
+
+    background:#111;
+
+    color:white;
+
+    padding:30px;
+
+    border-radius:10px;
+}
+
+.offer-box h2,
+.help-box h2{
+
+    color:orange;
+
+    margin-bottom:15px;
+}
+
+.offer-box h1{
+
+    margin-bottom:15px;
+
+    font-size:45px;
+}
+
+.offer-box p,
+.help-box p{
+
+    margin-bottom:20px;
+}
+
+.offer-box a,
+.help-box a{
+
+    display:inline-block;
+
+    background:orange;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+
+    border-radius:5px;
+}
+
+/* =========================
+   BOTH CATEGORIES
+========================= */
+
+.home-categories,
+.product-categories{
+
+    display:grid;
+
+    gap:20px;
+}
+
+/* HOME PAGE */
+
+.home-categories{
+
+    width:70%;
+
+    grid-template-columns:repeat(3,1fr);
+}
+
+/* PRODUCTS PAGE */
+
+.product-categories{
+
+    width:95%;
+
+    margin:50px auto;
+
+    grid-template-columns:repeat(5,1fr);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card,
+.category-card{
+
+    background:#1b1b1b;
+
+    color:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+
+    transition:0.3s;
+}
+
+.card:hover,
+.category-card:hover{
+
+    transform:translateY(-5px);
+
+    border:1px solid orange;
+}
+
+.card img,
+.category-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+}
+
+.card h3,
+.category-card p{
+
+    padding:15px;
+
+    font-weight:bold;
+}
+
+.category-card h3{
+
+    color:orange;
+
+    margin-bottom:10px;
+}
+
+.category-card button{
+
+    background:orange;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+}
+
+/* =========================
+   FLOATING CART
+========================= */
+
+.floating-cart{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:65px;
+
+    height:65px;
+
+    background:rgb(231, 9, 76);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+
+    transition:0.3s;
+
+    z-index:1000;
+}
+
+.floating-cart:hover{
+
+    background:orange;
+
+    transform:scale(1.1);
+}
+
+/* =========================
+   BRANDS
+========================= */
+
+.brands{
+
+    padding:40px 60px;
+
+    text-align:center;
+}
+
+.brands h2{
+
+    margin-bottom:30px;
+
+    font-size:40px;
+}
+
+.brand-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+}
+
+.brand-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.brand-card img{
+
+    width:100%;
+
+    height:140px;
+
+    object-fit:cover;
+}
+
+.brand-card p{
+
+    padding:15px;
+
+    font-weight:bold;
+}
+
+/* =========================
+   VEHICLE SEARCH
+========================= */
+
+.vehicle-search{
+
+    background:black;
+
+    padding:20px;
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+}
+
+.vehicle-search select,
+.vehicle-search button{
+
+    padding:12px;
+
+    width:180px;
+
+    border:none;
+
+    border-radius:5px;
+}
+
+.vehicle-search button{
+
+    background:orange;
+
+    color:white;
+}
+
+/* =========================
+   PROMO
+========================= */
+
+.promo{
+
+    display:flex;
+
+    gap:20px;
+
+    padding:0 50px 50px;
+}
+
+.promo-box{
+
+    flex:1;
+
+    background:white;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.promo-box img{
+
+    width:180px;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.about h2{
+    color:orange;
+    margin-bottom:20px;
+}
+
+.left-column{
+    margin-top:30px;
+}
+
+video{
+    width:100%;
+    max-width:700px;
+    border-radius:10px;
+}
+
+.about-section{
+    width:90%;
+    margin:50px auto;
+    display:flex;
+    gap:30px;
+}
+
+.left-column,
+.right-column{
+    flex:1;
+}
+
+.left-column img{
+    width:100%;
+    border-radius:10px;
+}
+
+.right-column h2{
+    color:orange;
+    margin-bottom:10px;
+}
+
+.right-column h3{
+    margin-bottom:20px;
+}
+
+.right-column p{
+    margin-bottom:20px;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.feature-item{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact{
+    width:90%;
+    margin:50px auto;
+    display:flex;
+    gap:30px;
+}
+
+.contact form{
+
+    flex:1;
+
+    background:#1b1b1b;
+
+    color:white;
+
+    padding:30px;
+
+    border-radius:10px;
+}
+
+.contact input,
+.contact textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:20px;
+
+    border:none;
+
+    border-radius:5px;
+
+    background:#333;
+
+    color:white;
+}
+
+.contact button{
+
+    background:orange;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:5px;
+}
+
+.contact-info{
+
+    flex:1;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section{
+    width:90%;
+    margin:50px auto;
+    display:flex;
+    gap:30px;
+}
+
+.contact-left,
+.store-info{
+    flex:1;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+}
+
+.contact-btn{
+    background:orange;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.map-placeholder img{
+    width:100%;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    text-decoration:none;
+    margin-right:10px;
+    font-size:22px;
+}
+
+/* =========================
+   FEEDBACK PAGE
+========================= */
+
+.recent-feedback{
+    flex:1;
+}
+
+.feedback-card,
+.feedback-form{
+
+    flex:1;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.feedback-card{
+    background:white;
+}
+
+.feedback-form{
+
+    background:#1b1b1b;
+
+    color:white;
+}
+
+/* =========================
+   CART PAGE
+========================= */
+
+.cart-items{
+    flex:2;
+}
+
+.summary{
+
+    flex:1;
+
+    background:#1b1b1b;
+
+    color:white;
+
+    padding:30px;
+
+    border-radius:10px;
+}
+
+.cart-card{
+
+    background:#1b1b1b;
+
+    color:white;
+
+    display:flex;
+
+    gap:20px;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+}
+
+.cart-card img{
+
+    width:140px;
+
+    height:140px;
+
+    object-fit:cover;
+}
+
+.remove-btn,
+.checkout-btn{
+
+    background:orange;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#000;
+
+    color:white;
+
+    padding:50px 60px;
+}
+
+.footer-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+}
+
+footer span{
+    color:orange;
+}
+
+footer input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:10px;
+}
+
+footer button{
+
+    background:orange;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    margin-top:10px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .navbar,
+    .contact-section,
+    .about-section,
+    .contact{
+        flex-direction:column;
+    }
+
+    .navbar nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+        margin-top:10px;
+    }
+
+    .hero{
+        height:350px;
+        padding:20px;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+        width:100%;
+    }
+
+    .hero-text p{
+        font-size:18px;
+    }
+
+    .vehicle-search{
+        flex-wrap:wrap;
+        padding:15px;
+    }
+
+    .vehicle-search select,
+    .vehicle-search button{
+        width:45%;
+    }
+
+    .product-categories{
+        width:100%;
+        padding:20px;
+        grid-template-columns:1fr;
+    }
+
+    .home-categories,
+    .features,
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+
+    .floating-cart{
+        width:60px;
+        height:60px;
+        font-size:25px;
+    }
+
+    #mobileMenu{
+        display:none;
+        width:100%;
+    }
+
+    #mobileMenu ul{
+        flex-direction:column;
+        text-align:center;
+        padding-top:20px;
+    }
+
+    #mobileMenu.active{
+        display:block;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
