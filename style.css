@@ -825,39 +825,43 @@ footer button{
    MOBILE RESPONSIVE
 ========================= */
 
-@media(max-width:768px){
+@media only screen and (max-width:800px){
 
-    .navbar,
-    .contact-section,
+    /* TABLET */
+
+    .main-content,
     .about-section,
+    .contact-section,
     .contact{
         flex-direction:column;
     }
 
-    .navbar nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:10px;
-        margin-top:10px;
-    }
-
-    .hero{
-        height:350px;
-        padding:20px;
-    }
-
-    .hero-text h1{
-        font-size:40px;
+    .sidebar{
         width:100%;
     }
 
-    .hero-text p{
-        font-size:18px;
+    .home-categories{
+        width:100%;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-categories{
+        width:100%;
+        grid-template-columns:repeat(2,1fr);
+        padding:20px;
+    }
+
+    .right-column,
+    .left-column,
+    .contact-left,
+    .store-info,
+    .contact form,
+    .contact-info{
+        width:100%;
     }
 
     .vehicle-search{
         flex-wrap:wrap;
-        padding:15px;
     }
 
     .vehicle-search select,
@@ -865,22 +869,75 @@ footer button{
         width:45%;
     }
 
-    .product-categories{
-        width:100%;
-        padding:20px;
-        grid-template-columns:1fr;
-    }
-
-    .home-categories,
-    .features,
     .footer-container{
         grid-template-columns:1fr;
     }
+}
+
+/* MOBILE PHONE */
+
+@media only screen and (max-width:500px){
+
+    .navbar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .navbar nav ul{
+        flex-direction:column;
+        gap:10px;
+        margin-top:10px;
+    }
+
+    .hero{
+        height:auto;
+        padding:40px 20px;
+    }
+
+    .hero-text h1{
+        font-size:30px;
+        width:100%;
+    }
+
+    .hero-text p{
+        font-size:16px;
+    }
+
+    .home-categories,
+    .product-categories,
+    .features,
+    .brand-container{
+        grid-template-columns:1fr;
+    }
+
+    .vehicle-search select,
+    .vehicle-search button{
+        width:100%;
+    }
+
+    .promo{
+        flex-direction:column;
+    }
+
+    .promo-box{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .promo-box img{
+        width:100%;
+        max-width:250px;
+        margin-top:20px;
+    }
 
     .floating-cart{
-        width:60px;
-        height:60px;
-        font-size:25px;
+        width:55px;
+        height:55px;
+        font-size:22px;
+    }
+
+    .menu-btn{
+        display:block;
     }
 
     #mobileMenu{
@@ -888,17 +945,12 @@ footer button{
         width:100%;
     }
 
-    #mobileMenu ul{
-        flex-direction:column;
-        text-align:center;
-        padding-top:20px;
-    }
-
     #mobileMenu.active{
         display:block;
     }
 
-    .menu-btn{
-        display:block;
+    #mobileMenu ul{
+        flex-direction:column;
+        padding-top:15px;
     }
 }
